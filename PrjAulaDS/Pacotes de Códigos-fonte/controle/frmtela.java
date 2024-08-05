@@ -8,13 +8,20 @@ package controle;
  *
  * @author Admin
  */
+
+import conexao.Conexao;// importar package classe
+import javax.swing.JOptionPane;
 public class frmtela extends javax.swing.JFrame {
 
     /**
      * Creates new form frmtela
      */
+    Conexao con_cliente;
+    
     public frmtela() {
         initComponents();
+        con_cliente = new Conexao();// inicialização do objeto como instância
+        con_cliente.conecta();// chama o método q conecta
     }
 
     /**
